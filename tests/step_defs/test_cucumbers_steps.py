@@ -11,6 +11,7 @@ scenarios('../features/cucumbers.feature')
 
 
 @given(parsers.cfparse('the basket has "{initial:Number}" cucumbers', extra_types=EXTRA_TYPES), target_fixture='basket')
+@given('the basket has "<initial>" cucumbers', target_fixture='basket')
 def busket(initial: int):
     return CucumberBasket(initial_count=initial)
 
